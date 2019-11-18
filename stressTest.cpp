@@ -35,10 +35,9 @@ class DumpObj{
 };
 
 int main() {
-	int x;
+	// automatically detects the available no of cpus
+	int x = thread::hardware_concurrency();
 	int y;
-	cout << "please enter the number of threads your pc has : " << endl;
-	cin >> x;
 	cout << "please eneter the amount of random access memory (RAM) your pc has in MegaBytes :: 1gb == 1000mb (0 if you don't want to stress your memory) :" << endl;
 	cin >> y;
 	cout << "use ctrl+c to exit the stress test" << endl;
